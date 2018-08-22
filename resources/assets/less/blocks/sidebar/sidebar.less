@@ -1,0 +1,173 @@
+.sidebar {
+  position: relative;
+  .avatar {
+    margin-top: 72px;
+  
+    &__status {
+      width: 12px;
+      height: 12px;
+      top: 13px;
+      left: 84px;
+    }
+    &__info {
+      margin-top: -2px;
+      margin-left: 28px;
+    }
+  }
+  &__logo {
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    width: 270px;
+    svg {
+      width: 180px;
+      height: 37px;
+      background-size: 180px 37px;
+    }
+    .text {
+      font-size: 16px;
+      font-family: Geometria;
+      color: #53bc73;
+      margin: 0;
+      position: absolute;
+      bottom: -16px;
+      letter-spacing: 1px;
+      left: 0px;
+      z-index: 1;
+      
+    }
+  }
+  .list {
+    margin-top: 94px;
+    &__item {
+      
+      .icon-circle {
+        width: 31px;
+        height: 31px;
+        vertical-align: middle;
+        margin-right: 15px;
+        margin-top: -6px;
+        .icon-qu {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          margin: -6.5px 0 0 -4.5px;
+          z-index: 1;
+        }
+        .icon-docum {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          margin: -7px 0 0 -6px;
+          z-index: 1;
+        }
+      }
+      .help {
+        margin-left: 13px;
+        top: 0;
+      }
+      .numb {
+        font-size: 21px;
+        font-family: GeometriaMed;
+        color: #5fce81;
+        text-decoration: none;
+        position: relative;
+        letter-spacing: 1px;
+      }
+      .text-info {
+        font-family: GeometriaLight;
+        letter-spacing: 1px;
+        font-size: 16px;
+        color: #000000;
+        text-decoration: none;
+        position: relative;
+      }
+      .hidden-text {
+        display: none;
+        font-size: 10px;
+        vertical-align: middle;
+        .icon-question-small {
+          margin: 0 7px 0 9px;
+        }
+      }
+      >.text {
+        font-family: GeometriaLight;
+        font-size: 18px;
+        text-decoration: none;
+        color: #000000;
+        letter-spacing: 1px;
+        display: inline-block;
+        vertical-align: middle;
+        position: relative;
+        z-index: 3;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      .icon-done {
+        margin-left: 10px;
+      }
+      .icon-pencil {
+        position: relative;
+      }
+      &:hover .hidden-text {
+        display: inline-block;
+      }
+    }
+    &_info {
+      margin-top: 77px;
+      .list__item {
+        .text {
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+        &:first-child {
+          padding-bottom: 11px;
+        }
+        
+      }
+    }
+    &_status {
+      margin-top: 55px;
+      .list__item {
+        white-space: nowrap;
+      }
+    }
+  }
+  .button_next {
+    margin-top: 143px;
+    margin-bottom: 36px;
+    font-size: 14px;
+    padding-right: 23px;
+    padding-left: 14px;
+    .icon-arrow-btn {
+      right: 10px;
+      margin-top: -5px;
+    }
+    &:hover {
+      .icon-arrow-btn {
+        right: 8px;
+      }
+    }
+  }
+  .icon-mooraway {
+    margin: 210px 0 0 0;
+    position: fixed;
+    left: -70px;
+    bottom: 0;
+    z-index: 0;
+    
+  }
+}
+.sidebar-edit__item {
+  display: inline-block;
+  input {
+    width: 100%;
+    border: none;
+    font-size: 16px;
+    font-family: GeometriaLight;
+    letter-spacing: 1px;
+    font-weight: 400;
+  }
+}

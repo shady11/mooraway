@@ -1,0 +1,44 @@
+.avatar__edit{
+  cursor: pointer;
+  display: block;
+  color: #e8eaec;
+  border-radius: 500px;
+  text-align: center;
+
+  &:hover{
+    color: #7fd5c2;
+    border-color: #7fd5c2;
+  }
+  &_small {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    .i-arrow  {
+      position: absolute;
+      top: 50%;
+      margin-top: -6.63px;
+    }
+
+  }
+  &_big{
+    position: absolute;
+    top: 50%;
+    left: 35px;
+
+    margin-top: -18px;
+
+    width: 36px;
+    height: 36px;
+    
+    .fa, .icon {
+      line-height: 36px;
+      margin-top: -1px;
+    }
+  }
+}

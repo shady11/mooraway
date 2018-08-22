@@ -1,0 +1,42 @@
+<form name="signInForm" novalidate>
+    <div class="content__block-center content__block-center_orange slide-enter">
+        <div class="content__block-header">
+            <span class="icon-closed" ng-click="$ctrl.close()"><span class="icon-sprite"></span></span>
+            <span class="text">войти</span>
+            <span class="icon-mooraways" style="left: 150px"><span class="icon-sprite"></span></span>
+        </div>
+        <div class="content__block-content">
+            <div class="category__item"
+                 ng-class="{'category_with-error': $ctrl.errors.email || (signInForm.email.$invalid && signInForm.email.$touched)}">
+                <div class="category__item-label">Ваш Email</div>
+                <div class="category__input category__input_small category__input_gray">
+                    <input type="email"
+                           placeholder="Майл"
+                           ng-model="$ctrl.fields.email"
+                           name="email"
+                           required
+                           value="Alexander@mail.com">
+                </div>
+            </div>
+            <div class="category__item"
+                 ng-class="{'category_with-error': $ctrl.errors.password || (signInForm.password.$invalid && signInForm.password.$touched)}">
+                <div class="category__item-label">Ваш пароль</div>
+                <div class="category__input category__input_small category__input_gray">
+                    <input class="input"
+                           type="password"
+                           placeholder="Введите пароль*"
+                           ng-model="$ctrl.fields.password"
+                           name="password"
+                           required>
+                </div>
+            </div>
+            <div class="content__block-btn">
+                <button class="button"
+                        type="submit"
+                        ng-disabled="$ctrl.loading || signInForm.$invalid"
+                        ng-click="$ctrl.submit()">Далее</button>
+            </div>
+            <a href="#" class="link">Забыли пароль?</a>
+        </div>
+    </div>
+</form>

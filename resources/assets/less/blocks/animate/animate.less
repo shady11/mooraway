@@ -1,0 +1,58 @@
+//slider
+.swap-animation {
+  position: relative;
+}
+.swap-animation.ng-enter, .swap-animation.ng-leave {
+  transition: 0.75s linear all;
+}
+.swap-animation.ng-enter {
+  top: 30px;
+  opacity: 0;
+}
+.swap-animation.ng-enter-active {
+  top: 0;
+  opacity: 1;
+}
+.swap-animation.ng-leave {
+  top: -38px;
+  opacity: 1;
+}
+.swap-animation.ng-leave-active {
+  top: -60px;
+  opacity: 0;
+}
+.slider__text {
+  font-family: Geometria;
+  color: #fff;
+  font-size: 28px;
+  display: inline-block;
+  vertical-align: middle;
+}
+//dots
+.slider__dot.selected-add,
+.slider__dot.selected-remove {
+  opacity: 0.1;
+  transition: opacity 1.8s;
+}
+.slider__dot.selected-add-active,
+.slider__dot.selected-remove-active {
+  opacity: 1;
+}
+//menu
+.menu-animation {
+  transition: transform .2s ease-out;
+}
+.menu-animation.ng-enter {
+  transform: translateY(calc(-100% - 20px));
+}
+.menu-animation.ng-enter-active {
+  transform: translateY(0);
+}
+.menu-animation.ng-leave {
+  transform: translateY(0);
+}
+
+.menu-animation.ng-leave-active {
+  transform: translateY(calc(-100% - 20px));
+}
+

@@ -1,0 +1,32 @@
+.button_next {
+  font-size: 15px;
+  font-family: GeometriaMed;
+  background: #5fce81;
+  border-radius: 3px;
+  border:  none;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 33px;
+  position: relative;
+  letter-spacing: 1px;
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background:  #53bc73;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+  }
+  .icon-arrow-btn {
+    position: absolute;
+    top: 50%;
+    margin-top: -6px;
+    z-index: 1;
+  }
+  &:hover {
+    background: #43c96c;
+  }
+}

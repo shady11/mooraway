@@ -1,0 +1,40 @@
+<div class="article__select" ng-mouseleave="$ctrl.preview($ctrl.selected)">
+    <span class="text">Выбрать статус:</span>
+    <div class="category__input category__input_drop"
+         ng-class="{'category__input_drop-up': $ctrl.isShowSelectList}"
+         ng-click="$event.stopPropagation();$ctrl.toggleSelectList()">
+        <input class="input" type="text" ng-model="$ctrl.selected.name" readonly="">
+        <span class="icon-arrow-select"><span class="icon-sprite"></span></span>
+        <div id="tooltip-selected-list-{{$id}}"
+             class="tooltip"
+             ng-if="$ctrl.isShowSelectList"
+             click-outside="$ctrl.closeSelectList()"
+             style="width: 100%;">
+            <div class="content tooltip__content tooltip__content_default">
+                <ul class="list">
+                    <li class="list__item"
+                        ng-repeat="item in $ctrl.items"
+                        ng-mouseover="$ctrl.preview(item)"
+                        ng-click="$event.stopPropagation();$ctrl.choose(item)">
+                        <div class="text">{{item.name}}</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="tooltip-selected-confirm-{{$id}}"
+             class="tooltip"
+             ng-if="$ctrl.isShowConfirmDelete"
+             click-outside="$ctrl.closeConfirmDelete()"
+             style="width: 100%;">
+            <div class="content tooltip__content tooltip__content_default">
+                <ul class="list">
+                    <li class="list__item">
+                        <div class="text">Подтверждаете удаление?</div>
+                        <a class="button button_ok" ng-click="$event.stopPropagation();$ctrl.submit(true)">Да</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

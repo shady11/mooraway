@@ -1,0 +1,51 @@
+<li class="list__item" ng-if="$ctrl.type == 'email' || $ctrl.type == 'phone'">
+    <a class="text-info">
+        <span class="icon-circle icon-circle_green">
+          <span ng-class="{'icon-mesage': $ctrl.type == 'email', 'icon-phones': $ctrl.type == 'phone' }">
+              <span class="icon-sprite"></span>
+          </span>
+        </span>
+
+        <div class="sidebar-edit__item" ng-if="!$ctrl.showEdit">
+            <input type="text" ng-model="$ctrl.item" readonly>
+        </div>
+        <div class="sidebar-edit__item" ng-if="$ctrl.showEdit" >
+            <input type="text"
+                   ng-model="$ctrl.item"
+                   ng-esc="$ctrl.cancelEdit()"
+                   ng-enter="$ctrl.doneEdit()">
+        </div>
+        <span class="icon-done" ng-if="$ctrl.showEdit" ng-click="$ctrl.doneEdit()">
+            <span class="icon-sprite"></span>
+        </span>
+        <div class="help help_edit" ng-click="$ctrl.toggleEdit()" ng-if="!$ctrl.showEdit">
+              <span class="icon-pencil">
+                <span class="icon-sprite"></span>
+              </span>
+            <span class="text">Изменить</span>
+        </div>
+    </a>
+</li>
+<div ng-if="$ctrl.type == 'name'">
+    <div class="help help_edit" ng-click="$ctrl.toggleEdit()" >
+        <span class="icon-done" ng-if="$ctrl.showEdit" ng-click="$ctrl.doneEdit()">
+            <span class="icon-sprite"></span>
+        </span>
+        <span class="icon-pencil" ng-if="!$ctrl.showEdit">
+          <span class="icon-sprite"></span>
+        </span>
+        <span class="text">Изменить</span>
+    </div>
+    <input class="name"
+           ng-if="!$ctrl.showEdit"
+           type="text"
+           ng-model="$ctrl.item"
+           readonly>
+    <input type="text"
+           ng-if="$ctrl.showEdit"
+           class="name"
+           ng-model="$ctrl.item"
+           maxlength="12"
+           ng-esc="$ctrl.cancelEdit()"
+           ng-enter="$ctrl.doneEdit()">
+</div>

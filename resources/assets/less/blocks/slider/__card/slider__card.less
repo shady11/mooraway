@@ -1,0 +1,82 @@
+.slider__card {
+  background: #f7f7f7;
+  padding: 50px 22px 5px 35px;
+  margin: 10px 10px 0;
+  position: relative;
+  overflow: visible!important;
+  height: 146px!important;
+  border-radius: 3px;
+  display: inline-block;
+  width: 280px;
+  max-width: 288px!important;
+  &:first-child {
+    margin-left: 0px;
+  }
+  &:last-child {
+    margin-right: 0px;
+  }
+  &_active {
+    &:before {
+      content: "";
+      width: 16px;
+      height: 16px;
+      border-radius: 100%;
+      background-color: #ff5252;
+      position: absolute;
+      top: -8px;
+      left: 15px;
+    }
+  }
+  .slider__description {
+    margin: 5px 0 0;
+  }
+  .pic {
+    display: inline-block;
+    vertical-align: top;
+    margin: 10px 26px 0 0;
+    text-align: center;
+    width: 55px;
+    height: 55px;
+    background-color: #fff;
+    border-radius: 100%;
+    border: 2px solid #eeeeee;
+    position: relative;
+    [class^="icon-"], [class*=" icon-"] {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin: -16.5px 0 0 -16.5px;
+      background-repeat: no-repeat;
+      &.icon-doc {
+      margin-left: -13.5px;
+      }
+      &.icon-libs {
+        margin-left: -13px;
+      }
+      &.icon-paint {
+        margin-left: -9.5px;
+      }
+    }
+    
+  }
+  .flags {
+    position: absolute;
+    top: 25px;
+    right: 21px;
+    text-align: right;
+  }
+  [class^="icon-"], [class*=" icon-"] {
+    display: inline-block;
+   
+  }
+  .icon-arrows {
+    margin: 0 5px;
+  }
+  .content {
+    display: inline-block;
+    width: 80%;
+    max-width: 190px;
+    vertical-align: middle;
+    margin-top: 26px;
+  }
+}

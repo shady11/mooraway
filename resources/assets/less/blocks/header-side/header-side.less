@@ -1,0 +1,116 @@
+.header-side {
+  display: flex;
+  min-width: 300px;
+  justify-content: flex-end;
+  align-items: center;
+  .link {
+    text-transform: uppercase;
+    font-family: Geometria;
+    font-size: 15px;
+    color: #469960;
+    margin-right: 45px;
+
+    &_go-lk {
+      text-transform: none;
+      font-size: 18px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      span{
+        margin-left: 14px;
+      }
+    }
+  }
+  .tooltip {
+    width: 290px;
+
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    &__content {
+      padding-bottom: 28px;
+      padding-top: 34px;
+    }
+    .icon-close {
+      position: absolute;
+      z-index: 2;
+      top: 36px;
+      right: 75px;
+    }
+    .list {
+      &:last-child {
+        margin-top: 50px;
+        .list__item {
+
+          &:last-child {
+            padding-top: 0px;
+          }
+        }
+      }
+      &__item {
+        .text {
+          font-family: GeometriaMed;
+          color: #9daeb4;
+          font-size: 17px;
+          text-decoration: none;
+          &_green {
+            color: #7dc385;
+          }
+        }
+        &_sub {
+          margin-top: -37px;
+          margin-bottom: -2px;
+        }
+      }
+    }
+  }
+}
+
+.side-popup {
+  .tooltip.tooltip-popup {
+    top: 0;
+    right: 20px;
+
+  }
+  .tooltip {
+    width: 290px;
+
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    &__content {
+      padding-bottom: 28px;
+      padding-top: 34px;
+    }
+    .icon-close {
+      position: absolute;
+      z-index: 2;
+      top: 36px;
+      right: 75px;
+    }
+    .list {
+      &:last-child {
+        margin-top: 50px;
+        .list__item {
+
+          &:last-child {
+            padding-top: 0px;
+          }
+        }
+      }
+      &__item {
+        .text {
+          font-family: GeometriaMed;
+          color: #9daeb4;
+          font-size: 17px;
+          text-decoration: none;
+          &_green {
+            color: #7dc385;
+          }
+        }
+        &_sub {
+          margin-top: -37px;
+          margin-bottom: -2px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+<div class="header-side">
+    <a class="link" ng-if="!$ctrl.isAuth" ng-click="$ctrl.login()">Вход</a>
+    <a href="/logout" class="link" ng-if="$ctrl.isAuth && $ctrl.group == 'user'">Выход</a>
+    <a href="/carrier/cabinet" class="link link_go-lk" ng-if="$ctrl.isAuth && $ctrl.group == 'carrier'">
+        <div class="avatar__cover avatar__cover_mini">
+            <img class="pic" ng-src="{{:: $ctrl.avatar }}" height="45" width="45">
+        </div>
+         <span>Мой кабинет</span>
+    </a>
+    <popup-menu-component type="main"></popup-menu-component>
+</div>

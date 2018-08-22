@@ -1,0 +1,29 @@
+<div class="age" ng-class="{'without-underline': $ctrl.item ==='0', 'input-width': $ctrl.item !=='0'}">
+    <div class="help help_edit">
+        <span class="icon-ok" ng-if="$ctrl.showEdit" ng-click="$ctrl.doneEdit();">
+            <span>OK</span>
+        </span>
+    </div>
+
+    <input ng-if="!$ctrl.showEdit && $ctrl.item"
+           type="text"
+           ng-value="$ctrl.item + '(г.)'"
+           ng-click="$ctrl.toggleEdit()"
+           readonly>
+    <input ng-if="!$ctrl.showEdit && !$ctrl.item"
+           type="text"
+           style="width: auto;"
+           placeholder="Добавить возраст*"
+           ng-click="$ctrl.toggleEdit()"
+           readonly>
+    <input type="number"
+           ng-change="$ctrl.checkLength()"
+           ng-if="$ctrl.showEdit"
+           ng-model="$ctrl.item"
+           placeholder="__"
+           ng-esc="$ctrl.cancelEdit()"
+           ng-enter="$ctrl.doneEdit()"
+
+           auto-focus>
+</div>
+

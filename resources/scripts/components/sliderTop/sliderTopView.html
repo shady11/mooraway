@@ -1,0 +1,9 @@
+<div class="banner__slider">
+    <div class="slider__dots">
+        <span class="slider__dot"
+              ng-animate-swap="$ctrl.slide.id"
+              ng-class="{'slider__dot_active selected': $ctrl.slide.id === dot.id }"
+              ng-repeat="dot in $ctrl.slides"></span>
+    </div>
+    <span class="slider__text swap-animation" ng-animate-swap="$ctrl.slide.id" >{{$ctrl.slide.content}}</span>
+</div>

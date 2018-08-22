@@ -1,0 +1,34 @@
+.category {
+  background-color: #fff;
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 5px;
+
+  box-shadow: 0 3px 16px rgba(158, 157, 163, 0.08);
+  box-sizing: border-box;
+
+  margin-bottom: 30px;
+  font-size: 0;
+  &__content {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 82%;
+  }
+  .tag{
+    margin-top: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+    &__item{
+      &_border{
+        margin-bottom: 9px;
+      }
+    }
+  }
+  &_not-bg {
+    background-color: transparent;
+    box-shadow: none;
+    border: none;
+  }
+}

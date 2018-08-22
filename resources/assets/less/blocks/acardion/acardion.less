@@ -1,0 +1,119 @@
+.acardion {
+  margin: 60px 0 70px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-size: 0px;
+  &__drop-down {
+    position: absolute;
+    z-index: 3;
+    left: 0px;
+    right: 0px;
+    padding: 30px 35px 30px 50px;
+    background: #fff;
+    border: 1px solid #cdcdcd;
+    .text {
+      font-size: 18px;
+      font-family: GeometriaLight;
+      color: #000000;
+      line-height: 22px;
+      margin: 0;
+      &_blue {
+        color: #5772ff;
+        font-weight: 600;
+      }
+    }
+  }
+
+  &__inner {
+    position: relative;
+    background: #f7f7f7;
+    padding: 36px 0 36px 200px;
+    cursor: pointer;
+    &_active {
+      .acardion__drop-down {
+        display: block;
+      }
+    }
+    > [class^="icon-"], [class*=" icon-"] {
+      position: absolute;
+      top: 50%;
+      z-index: 2;
+    }
+    .icon-circle {
+      width: 50px;
+      height: 50px;
+      background-color: #fff;
+      display: inline-block;
+      overflow: hidden;
+      left: 50px;
+      margin-top: -25px;
+      
+    }
+    .icon-arrow-big-right {
+      right: 45px;
+      margin-top: -14px;
+    }
+    .icon-question-big {
+      width: 18px;
+      height: 24px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin:  -12px 0 0 -9px;
+    }
+    .icon-arrow {
+      right: 50px;
+      margin-top: -6px;
+      
+    }
+    > .text {
+      font-family: Geometria;
+      font-size: 22px;
+      color: #686868;
+    }
+   
+  }
+  &__item {
+    flex: 0 0 50%;
+  
+   box-sizing: border-box;
+    margin-bottom: 30px;
+    max-height: 100px;
+    &:nth-child(1) {
+      padding-right: 65px;
+     
+    }
+     &:nth-child(2) {
+      padding-left: 65px;
+      
+    }
+     &:nth-child(3) {
+      padding-right: 65px;
+      .acardion__drop-down {
+        padding-top: 19px;
+        padding-bottom: 19px;
+      }
+    }
+     &:nth-child(4) {
+      padding-left: 65px;
+      
+    }
+     &:first-child, 
+    &:nth-child(2) {
+      .acardion__drop-down {
+        top: 100%;
+        padding: 30px 35px 32px 50px;
+      }
+    }
+    &:last-child, 
+    &:nth-child(3) {
+      .acardion__drop-down {
+        bottom: 100%;
+      }
+    }
+   
+    
+  }
+  
+}

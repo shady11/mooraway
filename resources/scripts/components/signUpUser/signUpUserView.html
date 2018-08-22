@@ -1,0 +1,67 @@
+<form name="signUpUserForm" novalidate>
+    <div class="content__block-center content__block-center_blue slide-authorization">
+        <div class="content__block-header">
+            <span class="icon-closed icon-closed-blue" ng-click="$ctrl.close()"><span class="icon-sprite"></span></span>
+            <span class="text">Регистрация</span>
+            <span class="icon-mooraways icon-mooraways-blue" style="right: 327px; bottom: -1px"><span class="icon-sprite-two"></span></span>
+        </div>
+        <div class="content__block-content content__block-content_with-footer">
+            <div class="category__item"
+                 ng-class="{'category_with-error': $ctrl.errors.email || (signUpUserForm.email.$invalid && signUpUserForm.email.$touched)}">
+                <div class="category__item-label">Ваш Email*</div>
+                <div class="category__input category__input_small category__input_gray">
+                    <input class="input"
+                           type="email"
+                           name="email"
+                           placeholder="email"
+                           ng-model="$ctrl.fields.email"
+                           required>
+                </div>
+            </div>
+
+            <div class="category__item"
+                 ng-class="{'category_with-error': $ctrl.errors.password || (signUpUserForm.password.$invalid && signUpUserForm.password.$touched)}">
+                <div class="category__item-label">Ваш пароль</div>
+                <div class="category__input category__input_small category__input_gray">
+                    <input class="input"
+                           name="password"
+                           type="password"
+                           placeholder="Пароль"
+                           ng-model="$ctrl.fields.password"
+                           required>
+                </div>
+                <div class="checkbox-group">
+                    <label class="checkbox-label">
+                        <input name="conditions"
+                               required
+                               type="checkbox"
+                               ng-model="$ctrl.fields.conditions"
+                               class="checkbox">
+                        <span class="checkbox__indicator"></span>
+                    </label>
+                    <span class="checkbox-text">
+                        Я принимаю <a href="#">Условия использования</a> <br>и <a href="#">Политику конфиденциальности</a> MooraWay.
+                    </span>
+                </div>
+            </div>
+
+            <div class="content__block-btn">
+                <button type="submit"
+                        class="button"
+                        ng-disabled="$ctrl.loading || signUpUserForm.$invalid"
+                        ng-click="$ctrl.submit()">
+                    <span class="icon icon-air-wh"><span class="icon-sprite"></span></span>
+                    <span class="text">
+                        Далее
+                    </span>
+                </button>
+            </div>
+            <div class="content__block-footer">
+                <p class="text">
+                    *Выполните два шага авторицации, после<br>
+                    чего откроется доступ к контактам отправителя
+                </p>
+            </div>
+        </div>
+    </div>
+</form>

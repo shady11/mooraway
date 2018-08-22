@@ -1,0 +1,17 @@
+<div class="acardion__inner acardion__inner_activ" ng-click="$ctrl.showDrop()">
+    <span class="icon-circle">
+       <span class="icon-question-big">
+          <span class="icon-sprite"></span>
+        </span>
+    </span>
+    <span class="text">{{$ctrl.title}}</span>
+    <span class="icon-arrow-big-right">
+      <span class="icon-sprite"></span>
+    </span>
+    <div class="acardion__drop-down" ng-if="$ctrl.showDropdown" click-outside="$ctrl.close()">
+      <span class="icon-close" ng-click="$event.stopPropagation();$ctrl.close()">
+        <span class="icon-sprite"></span>
+      </span>
+        <div ng-bind-html="$ctrl.content | trust"></div>
+    </div>
+</div>

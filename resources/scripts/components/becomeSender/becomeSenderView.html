@@ -1,0 +1,37 @@
+<form name="homeForm">
+    <div class="category__item category__item_icon">
+        <div class="category__input category__input_figure-right" ng-class="{'category_with-error': homeForm.homeFormFrom.$error.required && homeForm.homeFormFrom.$touched}">
+            <input id="homeFormFrom"
+                   placeholder="Откуда"
+                   name="homeFormFrom"
+                   class="input"
+                   ng-model="homeFormFrom"
+                   auto-complete-city-directive
+                   required/>
+            <span class="icon-figure"><span class="icon-sprite-figure"></span></span>
+        </div>
+        <span class="icon-location"><span class="icon-sprite"></span></span>
+    </div>
+    <div class="category__item category__item_icon">
+        <div class="category__input category__input_figure-left" ng-class="{'category_with-error': homeForm.homeFormTo.$error.required && homeForm.homeFormTo.$touched}">
+            <input id="homeFormTo"
+                   placeholder="Куда"
+                   name="homeFormTo"
+                   class="input"
+                   ng-model="homeFormTo"
+                   auto-complete-city-directive
+                   required/>
+            <span class="icon-figure"><span class="icon-sprite-figure"></span></span>
+        </div>
+        <span class="icon-location"><span class="icon-sprite"></span></span>
+    </div>
+    <div class="category__item">
+        <button class="button button_send" ng-click="$ctrl.submit()"><span class="icon-air-wh"><span class="icon-sprite"></span></span>стать отправителем</button>
+    </div>
+</form>
+<style>
+    #ui-id-1{
+        width: 431.391px !important;
+        max-width: 431.391px !important;
+    }
+</style>

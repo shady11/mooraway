@@ -1,0 +1,11 @@
+<div class="nav">
+    <a href="" class="nav__link" ng-class="{'nav__link_active': $ctrl.side == 'left'}" ng-click="$ctrl.switchSide()">
+        Найти отправителя
+    </a>
+    <a href="" class="nav__switch" ng-click="$ctrl.switchSide()">
+        <span class="nav__switch-circle" ng-class="{'nav__switch-circle_right': $ctrl.side == 'right', 'nav__switch-circle_left': $ctrl.side == 'left'}"></span>
+    </a>
+    <a href="" class="nav__link" ng-class="{'nav__link_active': $ctrl.side == 'right'}" ng-click="$ctrl.switchSide()">
+        Стать отправителем
+    </a>
+</div>

@@ -1,0 +1,36 @@
+version: '2'
+services:
+  nginx:
+    image: jboesl/docker-nginx-headers-more
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - $PWD/:/site
+      - $PWD/docker/nginx:/etc/nginx/conf.d
+    expose:
+      - "80"
+    links:
+      - fpm
+  fpm:
+    build: $PWD/docker/php
+    expose:
+        - "9000"
+    volumes:
+      - $PWD/:/site
+    links:
+      - mysql
+  mysql:
+      image: mysql
+      ports:
+        - "3306:3306"
+      environment:
+          MYSQL_ROOT_PASSWORD: "root"
+          MYSQL_DATABASE: "mooraway"
+          MYSQL_USER: "app"
+          MYSQL_PASSWORD: "app"
+      volumes:
+        - mysqldata:/var/lib/mysql
+volumes:
+  mysqldata:
+    driver: "local"

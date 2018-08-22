@@ -1,0 +1,35 @@
+.tooltip_header {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  box-shadow: 0 3px 16px rgba(158, 157, 163, 0.8);
+  box-shadow: none;
+  width: 274px;
+  top: 0;
+  right: 67px;
+  position: fixed;
+  .icon-close {
+    position: absolute;
+    z-index: 2;
+    top: 100px;
+    right: 53px;
+  }
+  .list__item .text {
+    font-family: GeometriaMed;
+    color: #9daeb4;
+    font-size: 17px;
+    text-decoration: none;
+  }
+  &.tooltip_active {
+    display: block;
+    ~.opacity {
+      display: block;
+    }
+  }
+  z-index: 22;
+  .tooltip__content {
+    padding: 77px 45px 40px;
+  }
+  .avatar {
+    margin-bottom: 33px;
+  }
+}

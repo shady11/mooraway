@@ -1,0 +1,64 @@
+<div class="slider slider_gray slider_cards">
+    <div class="slider__solid"></div>
+    <div class="slide"  >
+        <div class="slider__item">
+            <div class="content">
+                <span class="icon-circle icon-circle_dark-green" ng-if="$ctrl.slide.id === 0">
+                    <span class="icon-fly"></span>
+                </span>
+                <span class="icon-circle icon-circle_purple" ng-if="$ctrl.slide.id === 1">
+                    <span class="icon-train"><span class="icon-sprite" ></span></span>
+                    <span class="icon-publick" style="display:none"><span class="icon-sprite"></span></span>
+                </span>
+                <span class="icon-circle icon-circle_brown" ng-if="$ctrl.slide.id === 2">
+                    <span class="icon-bus"><span class="icon-sprite"></span></span>
+                </span>
+
+                <h3 class="content__title" ng-bind-html="$ctrl.slide.title | trust"></h3>
+                <p class="content__text-medium" ng-bind-html="$ctrl.slide.content | trust"></p>
+            </div>
+        </div>
+        <div class="slider__item">
+            <div class="img">
+                <img ng-src="{{ $ctrl.slide.image }}">
+            </div>
+        </div>
+    </div>
+    <div class="settings">
+        <div class="slider__dots">
+            <span class="slider__dot" ng-class="{'slider__dot_active': $ctrl.slide.id === dot.id }" ng-repeat="dot in $ctrl.slides"></span>
+        </div>
+        <div class="slider__arrows">
+                <span class="slider__arrow slider__arrow_left" ng-click="$ctrl.leafDown()">
+                  <span class="icon-arrow-left">
+                    <span class="icon-sprite"></span>
+                  </span>
+                    <span class="slider__arrow-load">
+                        <span class="lds-css">
+                            <span class="lds-ring" style="width:100%;height:100%">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </span>
+                        </span>
+                    </span>
+                </span>
+            <span class="slider__arrow slider__arrow_right slider__arrow_click" ng-click="$ctrl.leafUp()">
+                  <span class="icon-arrow-right">
+                    <span class="icon-sprite"></span>
+                  </span>
+                    <span class="slider__arrow-load">
+                        <span class="lds-css">
+                            <span class="lds-ring" style="width:100%;height:100%">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </span>
+                        </span>
+                    </span>
+                </span>
+        </div>
+    </div>
+</div>

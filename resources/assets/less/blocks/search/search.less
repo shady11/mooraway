@@ -1,0 +1,44 @@
+.search {
+  input {
+    margin: 0;
+    border: none;
+    display: inline-block;
+    line-height: inherit;
+    background-color: transparent;
+    width: 100%;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    &::-webkit-input-placeholder {
+      color: #b1b1b1;
+    }
+    &::-webkit-search-cancel-button {
+      display: none;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+  &_bordered {
+    border: 1px solid #dedede;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    input[type=search] {
+      font-family: "ProximaNovaReg";
+      font-size: 12px;
+      padding: 0 11px;
+      display: inline-block;
+      line-height: 28px;
+      margin-right: -27px;
+      padding-right: 30px;
+    }
+    .icon-search {
+      right: 5px;
+      margin-top: -8px;
+      position: absolute;
+      top: 50%;
+    }
+  }
+  &_icon {
+    position: relative;
+  }
+}

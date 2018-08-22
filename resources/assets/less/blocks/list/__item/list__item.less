@@ -1,0 +1,67 @@
+.list__item{
+  box-sizing: border-box;
+  padding-top: .4em;
+  padding-bottom: .4em;
+  border: 1px solid transparent;
+  color: transparent;
+ 
+  &_hovered{
+    cursor: pointer;
+    &:hover{
+      background-color: #f9f9f9;
+      .text {
+        color: #000000;
+      }
+      .icon {
+        display: inline-block;
+      }
+    }
+  }
+  &_color_default{
+    color: #b5b5b5;
+  }
+  &_color_warning{
+    color: #da5c3e;
+  }
+  &_color_info{
+    color: #61a3da;
+  }
+ 
+
+  &_iconed{
+    margin-left: 0;
+    padding-left: 2em;
+    list-style: none;
+    position: relative;
+    .fa, .icon {
+      font-size: 16px;
+      display: none;
+      position: absolute;
+      color: #979797;
+      width: 40px;
+      text-align: center;
+      height: 100%;
+      line-height: 100%;
+    }
+    &_left {
+      .fa, .icon {
+        left: 5px;
+      }
+    }
+    &_right {
+      .fa, .icon {
+        right: 5px;
+      }
+    }
+  
+  }
+  .delete {
+    display: none;
+    position: absolute;
+    right: 55px;
+    top: 0px;
+    z-index: 2;
+    padding: 5px 15px;
+  }
+  
+}

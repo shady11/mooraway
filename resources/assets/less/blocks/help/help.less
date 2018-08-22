@@ -1,0 +1,31 @@
+.help {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  z-index: 3;
+  cursor: pointer;
+  top: 0px;
+  .text {
+    display: none;
+    font-size: 10px;
+    font-family: GeometriaLight;
+    color: #adadad;
+    top: -15px;
+    left: 100%;
+    position: absolute;
+  }
+  &:hover {
+    .text {
+      display: block;
+    }
+  }
+  &_edit,  &_exit {
+    left: 100%;
+  }
+  &_exit {
+    margin-left: 33px;
+  }
+  &_edit {
+    margin-left: -7px;
+  }
+}

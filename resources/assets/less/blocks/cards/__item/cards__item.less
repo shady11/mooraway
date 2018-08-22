@@ -1,0 +1,64 @@
+.cards__item{
+  display: inline-block;
+  border-radius: 8px;
+  background-color: #fff;
+  max-width: 370px;
+  min-width: 360px;
+  min-height: 282px;
+  box-sizing: border-box;
+  padding: 43px 54px 81px;
+  flex: 0 0 33%;
+  margin-right: 5%;
+  position: relative;
+  &:first-child {
+    background-color: transparent;
+    border: 1px dashed #aeaeae;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 27px 54px 0px;
+    
+  }
+  &:nth-child(3n+3){
+    margin-right: 0;
+  }
+  .article__value {
+    margin-bottom: 12px;
+
+  }
+  .article__caption {
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+  }
+  .category__input_drop {
+    width: 163px;
+    display: inline-block;
+  }
+  .article__delete, .article__select {
+    margin-top: 33px;
+    position: absolute;
+    left: 55px;
+    right: 55px;
+    bottom: 0px;
+    height: 60px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0px;
+      left: -55px;
+      right: -55px;
+      border-top: 1px solid #eaeff4;
+    }
+  }
+  .article__value .text {
+    font-size: 14px;
+  }
+  .icon-plus {
+    margin-bottom: 25px;
+  }
+}

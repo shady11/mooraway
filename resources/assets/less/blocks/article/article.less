@@ -1,0 +1,358 @@
+.article {
+  background-color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  .sidebar {
+    display: inline-block;
+    padding: 28px 5px 23px 37px;
+    img {
+      border-radius: 5px;
+    }
+    .content__caption-text {
+      font-size: 20px;
+      font-family: ProximaNovaReg;
+      line-height: 20px;
+      display: block;
+      margin: 0;
+      color: #9aa5ab;
+    }
+    .text {
+      font-family: ProximaNovaLight;
+      font-size: 14px;
+      line-height: 24px;
+      color: #9aa5ab;
+      margin: 0;
+    }
+  }
+  &_social {
+    &:hover {
+      box-shadow: 0 16px 25px #e1ecef;
+    }
+    padding-bottom: 10px;
+    .article__description {
+      margin: 49px 0 45px;
+      letter-spacing: 1px;
+    }
+    .article__text {
+      margin: 0 auto 50px;
+      max-width: 740px;
+    }
+  }
+  &_send {
+    &:hover {
+      box-shadow: 0 16px 25px #e1ecef;
+    }
+    .article__description {
+      margin: 44px 0 35px;
+    }
+    .button_next {
+      font-size: 14px;
+    }
+  }
+  &_card {
+    border-radius: 8px !important;
+
+    .article__button .button:hover .icon-arrow-btn {
+      right: 24px;
+    }
+    .avatar {
+      margin: 35px 25px 35px 70px;
+      &__info {
+        margin-left: 26px;
+        .name {
+          color: #777e85;
+        }
+      }
+      &__status {
+        width: 21px;
+        height: 21px;
+        top: 4px;
+        left: 80px;
+        .icon-fly {
+          width: 19px;
+          height: 16px;
+          margin: -8.5px 0 0 -9.5px;
+          background-size: 19px 16px;
+        }
+
+      }
+    }
+  }
+  &_pass {
+    &:hover {
+      cursor: pointer;
+      box-shadow: 0 16px 25px #daecdf;
+    }
+
+    &.active {
+      box-shadow: 0 16px 25px #daecdf;
+    }
+  }
+  &_stew {
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      bottom: 0px;
+      width: 7px;
+      background-color: #afd8e0;
+      border-top-left-radius: 8px;
+      border-bottom-left-radius: 8px;
+    }
+    &:hover, {
+      cursor: pointer;
+      box-shadow: 0 16px 25px #e1ecef;
+    }
+
+    &.active {
+      box-shadow: 0 16px 25px #e1ecef;
+    }
+
+  }
+  &__numb {
+    font-family: GeometriaMed;
+    font-size: 22px;
+    display: block;
+    margin: 0 0 25px 0;
+    color: #000000;
+  }
+  &__value {
+    font-size: 0px;
+    .text {
+      font-family: GeometriaLight;
+      font-size: 15px;
+      color: #9ba0a6;
+      margin: 0 0 5px 0;
+      width: 100%;
+      letter-spacing: 1px;
+
+    }
+    .date, .time, .price, .location {
+      display: inline-block;
+      font-size: 18px;
+      font-family: GeometriaMed;
+
+    }
+    .value-text {
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .date, .time {
+      color: #a0e7a1;
+      width: 50%;
+      position: relative;
+      box-sizing: border-box;
+      white-space: nowrap;
+
+    }
+    .price {
+      color: #fdc68a;
+      position: relative;
+      .icon-price {
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+
+      }
+    }
+    .location {
+      text-align: left;
+      padding-left: 30px;
+      position: relative;
+      .icon-lc-big {
+        position: absolute;
+        left: 0px;
+      }
+    }
+    .date {
+      text-align: left;
+    }
+    .time {
+      text-align: right;
+    }
+    .location {
+      color: #fdb1c7;
+    }
+    .price {
+      padding-left: 30px;
+    }
+  }
+  &_card-sender {
+    &:hover {
+      box-shadow: 0 16px 25px #e1ecef;
+    }
+    border-radius: 8px !important;
+    .avatar {
+      margin: 60px 0 50px 100px;
+      .name {
+        font-size: 20px;
+        color: #000000;
+
+      }
+      .time {
+
+      }
+    }
+    .article__instruction {
+      margin-top: 23px;
+      line-height: 23px;
+      margin-left: 27px;
+    }
+    .article__number {
+      margin-bottom: 22px;
+    }
+    .article__button {
+      margin-right: 90px;
+      margin-top: 24px;
+      .button {
+        padding-left: 23px;
+        padding-right: 32px;
+        .icon-arrow-btn {
+          right: 20px;
+        }
+        &:hover {
+          .icon-arrow-btn {
+            right: 15px;
+          }
+        }
+
+      }
+      &:before {
+        content: "";
+        display: none;
+      }
+
+    }
+    .avatar {
+      &__status {
+        left: 119px;
+        top: 16px;
+      }
+      &__info {
+        margin-left: 43px;
+      }
+    }
+    .article__value {
+      .date, .time, .price, .location {
+        font-size: 25px;
+        letter-spacing: 1px;
+      }
+      .location {
+        padding-left: 34px;
+      }
+      .icon-lc-big, .icon-calendar, .icon-price {
+        bottom: 5px;
+
+      }
+      .text {
+        font-size: 18px;
+
+      }
+    }
+  }
+  &__button {
+    margin-right: 35px;
+    position: relative;
+    .button {
+      padding-right: 47px;
+      .icon-arrow-btn {
+        right: 33px;
+      }
+      &:hover {
+        .icon-arrow-btn {
+          right: 28px;
+        }
+      }
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      top: -61px;
+      bottom: -61px;
+      left: -35px;
+      border-left: 1px solid #edf1f5;
+
+    }
+  }
+  &__description {
+    font-family: Geometria;
+    font-size: 28px;
+    color: #777e85;
+    font-weight: 400;
+  }
+  &__caption {
+    font-family: GeometriaMed;
+    font-size: 16px;
+    color: #000000;
+    margin-bottom: 24px;
+  }
+  &__text {
+    font-family: GeometriaLight;
+    font-size: 21px;
+    width: 80%;
+    max-width: 750px;
+    color: #aeb9c4;
+
+    .link {
+      color: #8bd782;
+    }
+  }
+  &__text,
+  .social {
+    flex: 1 1 100%;
+    text-align: center;
+    justify-content: center;
+
+  }
+  &__text {
+    margin: 0 auto 45px;
+  }
+  .social {
+    margin: 0 auto 48px;
+  }
+  &__delete {
+    padding: 12px 0;
+    cursor: pointer;
+    .text {
+      font-family: GeometriaLight;
+      font-size: 14px;
+      color: #c4c7ca;
+      letter-spacing: 1px;
+    }
+  }
+  &__select {
+    padding: 12px 0;
+    cursor: pointer;
+    margin-right: -37px;
+    .text {
+      font-family: GeometriaLight;
+      font-size: 14px;
+      color: #c4c7ca;
+      letter-spacing: 1px;
+    }
+  }
+  &__instruction {
+    font-family: GeometriaLight;
+    font-size: 16px;
+    color: #000000;
+    flex: 0 0 340px;
+    .link {
+      color: #5fce81;
+      margin-right: 5px;
+    }
+
+  }
+  &__footer {
+    border-top: 1px solid #dcdcdc;
+    padding: 56px 0 90px;
+    margin: 0 105px;
+    display: flex;
+    justify-content: space-between;
+
+  }
+}

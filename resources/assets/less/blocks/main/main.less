@@ -1,0 +1,132 @@
+.home {
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 25;
+  opacity: 0.8;
+  background: url(interface/img/home.png) no-repeat;
+  background-position: top center;
+}
+.bg1 {
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 25;
+  opacity: 0.8;
+  background: url(interface/img/bg1.png) no-repeat;
+  background-position: top center;
+}
+.bg2 {
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 25;
+  opacity: 0.8;
+  background: url(interface/img/bg2.png) no-repeat;
+  background-position: top center;
+}
+.bg3 {
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 25;
+  opacity: 0.8;
+  background: url(interface/img/bg3.png) no-repeat;
+  background-position: top center;
+}
+.bg4 {
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 25;
+  opacity: 0.8;
+  background: url(interface/img/bg4.png) no-repeat;
+  background-position: top center;
+}
+.bg5 {
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 25;
+  opacity: 0.8;
+  background: url(interface/img/bg5.png) no-repeat;
+  background-position: top center;
+}
+body {
+  position: relative;
+  min-width: 1921px;
+  margin: 0 auto;
+}
+.main {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0 70px;
+  
+  width: 100%;
+   > .content {
+    margin: 0;
+    width: 100%;
+    .article {
+      &_cards {
+        padding: 0;
+      }
+    }
+  }
+  &_justified_between {
+    justify-content: space-between;
+    min-height: 100vh;
+    min-width: 100%;
+    padding: 0;
+    >.content {
+      margin-left: 470px;
+      background-color: #f1f1f1;
+      min-height: 100vh;
+      padding: 87px 120px 0;
+      box-sizing: border-box;
+      
+      .article_card {
+        padding: 0;  
+      }
+    }
+  }
+  &_gray {
+    background: #f6f6f6;
+    padding: 0px;
+    min-height: 100vh;
+    .content {
+      padding-top: 30px;
+    }
+  }
+  
+  > .sidebar {
+    box-sizing: border-box;
+    width: 470px;
+    max-width: 470px;
+    padding: 85px 50px 0 69px; 
+    background: #fff;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 20;
+    overflow: auto;
+  }
+}

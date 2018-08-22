@@ -1,0 +1,42 @@
+.actions {
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  z-index: 5;
+  text-align: center;
+  &__wrapper_open .actions__item.link {
+    display: block;
+  }
+  &__item {
+    cursor: pointer;
+    display: block;
+    text-align: center;
+    margin-bottom: 25px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &_add {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-align: center;
+      align-items: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      span.text {
+        font-size: 36px;
+        font-family: "ProximaNovaBold";
+        color: #fff;
+      }
+    }
+    .text {
+      text-transform: uppercase;
+      color: #141311;
+      font-size: 12px;
+      font-family: "ProximaNovaReg";
+      display: block;
+    }
+    &.link {
+      display: none;
+    }
+  }
+}

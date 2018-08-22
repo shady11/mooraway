@@ -1,0 +1,53 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "npm run development",
+    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch-poll": "npm run watch -- --watch-poll",
+    "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "prod": "npm run production",
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+  },
+  "devDependencies": {
+    "angular": "^1.6.7",
+    "axios": "^0.16.2",
+    "bootstrap-sass": "^3.3.7",
+    "cross-env": "^5.1.1",
+    "gulp": "^3.9.1",
+    "jquery": "^3.2.1",
+    "laravel-elixir": "^6.0.0-17",
+    "laravel-elixir-ng-annotate": "^1.0.1",
+    "laravel-elixir-remove": "^0.2.1",
+    "laravel-mix": "^1.7.2",
+    "lodash": "^4.17.4",
+    "ng-dialog": "^1.4.0",
+    "vue": "^2.5.11"
+  },
+  "dependencies": {
+    "@iamadamjowett/angular-click-outside": "^2.10.1",
+    "angucomplete-alt": "^3.0.0",
+    "angular-animate": "^1.6.7",
+    "angular-datepicker": "^1.0.5",
+    "angular-file-upload": "^2.5.0",
+    "angular-i18n": "^1.6.7",
+    "angular-locale": "^0.3.1",
+    "angular-moment": "^1.2.0",
+    "angular-slick": "0.0.0",
+    "angular-socialshare": "^2.3.11",
+    "angularjs-datepicker": "^2.1.23",
+    "gulp-angular-templatecache": "^2.0.0",
+    "gulp-insert": "^0.5.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-rev": "^8.1.0",
+    "gulp-sourcemaps": "^2.6.1",
+    "gulp-uglify": "^3.0.0",
+    "jquery-ui": "^1.12.1",
+    "jquery-ui-dist": "^1.12.1",
+    "laravel-elixir-angular-templatecache": "^0.1.2",
+    "moment": "^2.20.0",
+    "slick-carousel": "^1.8.1",
+    "underscore": "^1.8.3"
+  }
+}

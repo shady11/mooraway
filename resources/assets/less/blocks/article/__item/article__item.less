@@ -1,0 +1,26 @@
+.article__item {
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  &_active {
+    position: relative;
+    &:before {
+      content: "";
+      background-color: #0ac8ff;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 2px;
+      box-shadow: 0 4px 30px 0 rgba(24, 205, 232, 0.4);
+      -moz-box-shadow: 0px 5px 30px #18cde8;
+    }
+  }
+  .avatar {
+    margin: 6px -3px 0 17px;
+  }
+  .content__caption-text {
+    margin: 0;
+    line-height: 30px;
+  }
+}

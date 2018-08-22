@@ -1,0 +1,51 @@
+<div class="bg"></div>
+<form method="POST" action="https://money.yandex.ru/quickpay/confirm.xml">
+    <input type="hidden" name="receiver" value="410012930049153">
+    <input type="hidden" name="formcomment" value='Благотворительное пожертвование на улучшение "MooraWay"'>
+    <input type="hidden" name="short-dest" value="Переведите 200 руб. (или 4$), если считаете что сервис помог Вам.">
+    <input type="hidden" name="label" value="$order_id">
+    <input type="hidden" name="quickpay-form" value="donate">
+    <input type="hidden" name="targets" value="транзакция {order_id}">
+    <input type="hidden" name="sum" value="200" data-type="number">
+    <input type="hidden" name="comment" value="Хотелось бы получить дистанционное управление.">
+    <input type="hidden" name="need-fio" value="false">
+    <input type="hidden" name="need-email" value="false">
+    <input type="hidden" name="need-phone" value="false">
+    <input type="hidden" name="need-address" value="false">
+    <input type="hidden" name="paymentType" ng-value="$ctrl.paymentType">
+
+    <div class="content__block-center content__block-center_blue slide-danate">
+        <div class="content__block-header">
+            <span class="icon-closed icon-closed-blue" ng-click="$ctrl.close()"><span class="icon-sprite"></span></span>
+            <span class="text">ВАША БЛАГОДАРНОСТЬ</span>
+            <span class="icon-mooraways icon-mooraways-blue" style="right: 38px; bottom: -1px"><span class="icon-sprite-two"></span></span>
+        </div>
+        <div class="content__block-content content__block-content_with-footer">
+            <span class="content__block-text">
+                Сервис MooraWay помог Вам найти отправителя?
+                Переведите любую сумму, насколько был полезен сервис:
+            </span>
+            <div class="category__item category__item_flex">
+                <button type="submit" class="category__side" ng-click="$ctrl.paymentType='AC'">
+                    <span class="icon-card">
+                        <span class="icon-sprite"></span>
+                    </span>
+                    <input class="link" type="submit" value="Перевод картой">
+                </button>
+                <button type="submit" class="category__side" ng-click="$ctrl.paymentType='MC'">
+                    <span class="icon-monay">
+                        <span class="icon-sprite"></span>
+                    </span>
+                    <input class="link" type="submit" value="Моб. оператором">
+                </button>
+            </div>
+
+            <div class="content__block-footer">
+                <span class="text">
+                    Сервис <a href="#" class="link">бесплатный</a>, существует только
+                    за счет Ваших добровольных переводов!
+                </span>
+            </div>
+        </div>
+    </div>
+</form>

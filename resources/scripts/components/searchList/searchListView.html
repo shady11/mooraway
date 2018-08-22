@@ -1,0 +1,38 @@
+<div class="article article_card"
+     ng-repeat="item in $ctrl.items"
+     ng-click="$ctrl.goView(item)"
+     ng-class="{'article_stew': item.user.type === 'steward' || item.user.type === 'stewardess', 'article_pass': item.user.type === 'user', 'active': item.id == $ctrl.activeId}">
+    <div class="avatar">
+        <div class="avatar__cover avatar__cover_big">
+            <img ng-if="::item.user.avatar" ng-src="{{ '/uploads/' + item.user.avatar }}" class="pic" height="94" width="94">
+        </div>
+        <div class="avatar__status"
+             ng-class="{'avatar__status_blue': item.user.type === 'steward' || item.user.type === 'stewardess', 'avatar__status_green': item.user.type === 'user'}">
+            <span class="icon-fly"></span>
+        </div>
+        <span class="avatar__info">
+            <span class="name">{{item.user.name}}{{item.user.age > 0 ? ', ' + item.user.age : ''}}</span>
+            <span class="status status_pass" ng-if="item.user.type === 'user'">Пассажир</span>
+            <span class="status status_stew" ng-if="item.user.type === 'steward'" >Стюарт</span>
+            <span class="status status_stew" ng-if="item.user.type === 'stewardess'">Стюардесса</span>
+        </span>
+    </div>
+
+    <div class="article__value">
+        <p class="text">Дата и время отправления</p>
+        <span class="date"><span class="icon-calendar"><span class="icon-sprite"></span></span><span class="value-text">{{ item.flightAt}}</span></span>
+        <span class="time"><span class="icon-time"><span class="icon-sprite"></span></span><span class="value-text">{{item.flightAtTime}}</span></span>
+    </div>
+    <div class="article__value">
+        <p class="text">Цена</p>
+        <span class="price"><span class="icon-price"><span class="icon-sprite"></span></span>По договоренности</span>
+    </div>
+    <div class="article__button">
+        <a ng-href="/search/view/{{item.id}}" class="button button_next">Подробнее<span class="icon-arrow-btn"><span class="icon-sprite"></span></span></a>
+    </div>
+</div>
+
+<div class="content__center" ng-if="$ctrl.loading">
+    <span class="icon-load"><span class="icon-sprite"></span></span>
+</div>
+

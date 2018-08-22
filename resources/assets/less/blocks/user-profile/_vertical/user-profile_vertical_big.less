@@ -1,0 +1,37 @@
+.user-profile_vertical_big{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .avatar{
+    margin-bottom: 25px;
+  }
+
+  .bio{
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .datagrid{
+    margin: 25px 0;
+    &__body{
+      .row{
+        border: none;
+        &__cell{
+          padding: 10px;
+          &:first-child{
+            color: #afbcc2;
+            font-family: ProximaNovaLight;
+            font-size: 12px;
+            text-transform: uppercase;
+          }
+          &:last-child{
+            font-size: 13px;
+          }
+        }
+        &:nth-child(3n + 3){
+          border-bottom: 1px solid #ecf2f5;
+        }
+      }
+    }
+  } 
+}

@@ -1,0 +1,31 @@
+<div class="content__block-center content__block-center_blue slide-authorization-contacts">
+    <div class="content__block-header">
+        <span class="icon-closed icon-closed-blue" ng-click="$ctrl.close()"><span class="icon-sprite"></span></span>
+        <span class="text">Контакты</span>
+        <span class="icon-mooraways icon-mooraways-blue" style="right: 137px; bottom: -1px"><span class="icon-sprite-two"></span></span>
+    </div>
+    <div class="content__block-content content__block-content_with-footer">
+        <span class="content__block-text">
+            Договоритесь о времени, стоимости
+                и месте передачи посылки:
+        </span>
+        <div class="content__block-info">
+            <span class="numb">
+                {{:: $ctrl.flightPhone }}
+            </span>
+        </div>
+        <div class="content__block-info">
+            <span class="name">
+                {{:: $ctrl.flightName }}
+            </span>
+        </div>
+        <div class="content__block-btn">
+            <button class="button button_orange" type="button" ng-click="$ctrl.agreed()">Договорились</button>
+            <button class="button" type="button" ng-click="$ctrl.notAgree()">Не договорились</button>
+        </div>
+        <div class="content__block-footer content__block-footer_btns">
+            <a ng-click="$ctrl.notAgree()" class="link">Не доступен</a>
+            <a ng-click="$ctrl.notAgree()" class="link">Это спам</a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,44 @@
+<div class="content__block-center content__block-center_blue slide-authorization-social">
+    <div class="content__block-header">
+        <span class="icon-closed icon-closed-blue" ng-click="$ctrl.close()"><span class="icon-sprite"></span></span>
+        <span class="text">Авторизация</span>
+        <span class="icon-mooraways icon-mooraways-blue" style="right: 227px; bottom: -1px"><span class="icon-sprite-two"></span></span>
+    </div>
+    <div class="content__block-content content__block-content_with-footer">
+        <span class="content__block-text">
+            Поделитесь записью в одной из соц. сетей,
+            нажмите “проверить”, после откроется доступ!
+        </span>
+        <p class="content__block-clarification">Шаг №1</p>
+        <div class="category__item">
+            <share-component
+                    class="social"
+                    before-click="$ctrl.beforeSocialClick()">
+            </share-component>
+        </div>
+        <p class="content__block-clarification">Шаг №2</p>
+        <div class="content__block-btn">
+            <button class="button"
+                    type="button"
+                    ng-class="{'button_loading': $ctrl.loading}"
+                    ng-disabled="!$ctrl.isClickSocialShare"
+                    ng-click="$ctrl.showContact()">
+                <span class="spinner-btn">
+                    <span class="rect1"></span>
+                    <span class="rect2"></span>
+                    <span class="rect3"></span>
+                    <span class="rect4"></span>
+                    <span class="rect5"></span>
+                </span>
+                <span>Проверить выполнение</span></button>
+        </div>
+        <div class="content__block-footer">
+            <a ng-click="$ctrl.showContact()" class="link">Меня нет в соц. сети</a>
+        </div>
+    </div>
+</div>
+
+
+<style>
+
+</style>

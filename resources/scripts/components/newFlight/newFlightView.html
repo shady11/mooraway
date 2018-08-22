@@ -1,0 +1,56 @@
+<form name="flightForm" novalidate>
+    <div class="content__block-center content__block-center_orange slide-new">
+        <div class="content__block-header">
+            <span class="icon-closed" ng-click="$ctrl.close()"><span class="icon-sprite"></span></span>
+            <span class="text">Новый перелёт</span>
+            <span class="icon-mooraways" style="left: 150px"><span class="icon-sprite"></span></span>
+        </div>
+        <div class="content__block-content">
+            <div class="category__item">
+                <div class="category__item-label">Дата и время отправления*</div>
+                <div class="category__input category__input_p category__input_small category__input_gray category__input_side">
+                    <datepicker date-format="dd.MM.yyyy" date-set="datetime.date" class="datapicker-toggle" datepicker-append-to="body">
+                        <input required class="input" type="text" name="flightAt" ng-model="$ctrl.fields.flightAt"></input>
+                    </datepicker>
+                    <input class="input" required type="time" name="flightAtTime" step="900" ng-model="$ctrl.fields.timeAt">
+                    <span class="msk">мск</span>
+                </div>
+            </div>
+            <div class="category__item category__item_flex">
+                <div class="category__item-label">Направление*</div>
+                <div class="category__input category__input_small category__input_gray category__input_item">
+                    <input id="flightFormFrom"
+                           placeholder="Откуда"
+                           name="flightFormFrom"
+                           class="input"
+                           ng-model="$ctrl.fields.fromId"
+                           auto-complete-city-directive
+                           required/>
+                    <span class="icon icon-location-black">
+                        <span class="icon-sprite"></span>
+                    </span>
+                </div>
+                <div class="category__input category__input_small category__input_gray category__input_item">
+                    <input id="flightFormTo"
+                           placeholder="Куда"
+                           name="flightFormTo"
+                           class="input"
+                           ng-model="$ctrl.fields.toId"
+                           auto-complete-city-directive
+                           required/>
+                    <span class="icon icon-location-black">
+                        <span class="icon-sprite"></span>
+                    </span>
+                </div>
+            </div>
+            <div class="content__block-btn">
+                <button class="button" type="submit"
+                        ng-disabled="$ctrl.loading || flightForm.$invalid"
+                        ng-click="$ctrl.submit()">
+                    <span class="icon-air-wh"><span class="icon-sprite"></span></span>
+                    Готово!
+                </button>
+            </div>
+        </div>
+    </div>
+</form>

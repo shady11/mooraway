@@ -1,0 +1,40 @@
+.category_with-error {
+  .category__item-label {
+    color: #a0a0a0;
+  }
+  .category__input {
+    border: 2px solid #ef0000;
+    border-radius: 3px;
+    > input {
+      color: #ef0000;
+      &::-webkit-input-placeholder {
+        color: #ef0000;  
+      }
+      &::-webkit-search-cancel-button {
+        color: #ef0000;
+      }
+    }
+  }
+  
+  &.category__input_figure-right, &.category__input_figure-left {
+    border: none;
+    border-radius: none;
+    box-shadow: 0 0 40px rgba(255, 40, 40, 0.9);
+    border-radius: 6px;
+    input {
+      color: #ff1111;
+      &::-webkit-input-placeholder {
+        color: #ff1111;  
+      }
+      &::-webkit-search-cancel-button {
+        color: #ff1111;
+      }
+    }
+  }
+  
+  .icon-figure {
+    .icon-sprite-figure {
+      background-position: -75px -3px;
+    }
+  }
+}

@@ -1,0 +1,111 @@
+.banner {
+  background: #fff;
+  position: relative;
+  margin-top: 100px;
+  width: 100%;
+  padding: 42px 0 163px 0;
+  background-size: 100%;
+  margin-bottom: 70px;
+  background-position: center center;
+  background-position-y: -98px;
+  height: 448px;
+  &__opacity {
+    background-image: url("interface/img/opacity.png");
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
+  &__content {
+    width: 80%;
+    margin: 50px auto 0;
+    position: relative;
+    z-index: 3;
+    max-width: 1250px;
+  }
+  &__title {
+    font-family: GeometriaExtraBold;
+    font-size: 42px;
+    color: #ffffff;
+    line-height: 1;
+    margin: 0 0 20px -3px;
+  }
+  &__slider {
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 75px;
+    height: 0;
+    .text {
+      font-family: Geometria;
+      color: #fff;
+      font-size: 28px;
+      line-height: 1;
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+  .slider {
+    &__dot {
+      &_active {
+          background: #dddddd;
+      }
+      background: #fff;
+    }
+    &__dots {
+      left: 0px;
+      top: -4px;
+      
+    }
+  }
+  .category {
+    margin: 0 -8px 95px -2px;
+    &__item {
+      display: inline-block;
+      padding: 0 8px;
+      box-sizing: border-box;
+
+      .icon-air-wh {
+          margin-right: 13px;
+        vertical-align: middle;
+        margin-left: -11px;
+      }
+      &:first-child {
+        padding-left: 0px;
+        width: 34%;
+      }
+      &:nth-child(2) {
+        width: 35%;
+        max-width: 434px;
+        .icon-location {
+          left: 62px;
+        }
+      }
+      &:last-child {
+        width: 31%;
+        width: 397px;
+        padding-right: 0px;
+      }
+    }
+  }
+  .video {
+    a {
+      display: inline-block;
+      text-decoration: none;
+    }
+    .text {
+      color: #fff;
+      font-size: 19px;
+      margin-left: 23px;
+      padding-bottom: 2px;
+      letter-spacing: 1px;
+      border-bottom: 1px dashed #fff;
+      font-family: Geometria;
+    }
+    .link, .button {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+}

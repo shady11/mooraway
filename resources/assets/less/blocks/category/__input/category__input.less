@@ -1,0 +1,234 @@
+.category__input {
+  background: #fff;
+  line-height: 86px;
+  border-radius: 6px;
+  > .add-file {
+    display: block;
+    text-align: center;
+  }
+  > input {
+    font-family: GeometriaLight;
+    font-size: 16px;
+    padding: 0 15px;
+    margin: 0;
+    border: none;
+    display: inline-block;
+    line-height: inherit;
+    width: 100%;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    letter-spacing: 1px;
+    color: #6e7172;
+    &::-webkit-input-placeholder {
+      color: #b1b1b1;
+    }
+    &::-webkit-search-cancel-button {
+      display: none;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+  
+  &_side {
+    font-size: 0px;
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 15px;
+      bottom: 15px;
+      z-index: 1;
+      border-left: 1px solid #d8d8d8;
+    }
+    > input {
+      width: 50%;
+      vertical-align: middle;
+      line-height: 56px;
+    }
+  }
+  &_item {
+    position: relative;
+    padding-left: 25px;
+    input {
+      font-size: 16px;
+      font-family: GeometriaReg;
+      color: #1c1c1c;
+      &::-webkit-input-placeholder {
+        color: #1c1c1c;
+      }
+    }
+    .icon {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      &-location-black {
+        margin-top: -8px;
+      }
+    }
+  }
+  .figure  {
+    position: absolute;
+    z-index: 2;
+  }
+  &_figure {
+    &-right,&-left {
+      > input {
+        &::-webkit-input-placeholder {
+          color: #6e7172;
+        }
+      }
+    }
+    &-right {
+
+      position: relative;
+      margin-right: 15px;
+      .icon-figure {
+        display: inline-block;
+        position: absolute;
+        right: -38px;
+        top: -10px;
+      }
+    }
+    &-left {
+      position: relative;
+      margin-left: 15px;
+      .icon-figure {
+        display: inline-block;
+        position: absolute;
+        top: -7px;
+        left: -38px;
+        transform: rotate(180deg);
+      }
+      > input {
+        padding-left: 57px;
+      }
+      .icon-location {
+        left: 52px;
+      }
+    }
+    &.category_with-error {
+      
+    }
+
+  }
+  &_small {
+    line-height: 55px;
+    border-radius: 2px;
+    border: 2px solid transparent;
+    > input {
+      color: #1c1c1c;
+      font-family: Geometria;
+      padding-left: 20px;
+    }
+    
+  }
+  &_center {
+    text-align: center;
+    padding-left: 0px;
+    padding-right: 0px;
+    > input {
+      width: auto;
+      padding: 0;
+      
+    }
+    .icon-eye {
+      margin-right: 30px;
+    }
+  }
+  &_border {
+    border: 1px solid #e0e0e0;
+    line-height: 58px;
+    .link {
+      font-family: Geometria;
+      font-size: 16px;
+      color: #1c1c1c;
+      text-decoration: none;
+      [class^="icon-"], [class*=" icon-"] {
+        vertical-align: middle;
+        margin-right: 10px;
+      }
+      
+    }
+  }
+  &_gray {
+    background-color: #f3f2f2;
+  }
+  &_drop {
+    line-height: 35px;
+    border: 1px solid #e5eaef;
+    border-radius: 3px;
+    position: relative;
+    cursor: pointer;
+    .icon-arrow-select {
+      position: absolute;
+      right: 5px;
+      top: 15px;
+    }
+    z-index: 3;
+    .input {
+      font-size: 16px;
+      font-family: GeometriaMed;
+      padding: 0 13px;
+      color: #4c4c4c;
+      letter-spacing: inherit;
+    }
+    .tooltip {
+      top: 42px;
+      box-shadow: none;
+      border-radius: 3px;
+      .button_ok {
+        min-width: 80px!important;
+        width: 81px;
+        padding-left: 22px;
+        margin-top: 15px;
+        margin-bottom: 10px;
+      }
+      .text {
+        font-size: 16px;
+        color: #4c4c4c;
+        letter-spacing: normal;
+      }
+      &__content_default {
+        padding: 5px 10px; 
+      }
+      .list__item {
+        cursor: pointer;
+        padding: 1px 0;
+        margin-bottom: 0px;
+      }
+    }
+    &-up {
+      .icon-arrow-select {
+        transform: rotate(180deg);
+      }
+    }
+    
+  }
+  &_small&_drop {
+    line-height: 55px;
+    border: none;
+    .input {
+      text-align: center;
+      color: #1c1c1c;
+      
+    }
+    .tooltip {
+      top: 100%;
+      margin-top: 7px;
+      border: 1px solid #dbdbdb;
+      .list__item {
+        border-bottom: 1px solid #dbdbdb;
+        text-align:center;
+        padding: 19px 0;
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+      .text {
+        font-family: Geometria;
+      }
+    }
+  }
+}

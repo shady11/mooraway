@@ -1,0 +1,29 @@
+<div class="content__block-center content__block-center_green slide-two slide-center">
+    <div class="content__block-header">
+        <span class="icon-closed-green" ng-click="$ctrl.close()"><span class="icon-sprite"></span></span>
+        <span class="text">Изменить фото</span>
+        <span class="icon-mooraways icon-mooraways-green" style="right: 61px; bottom: -2px"><span class="icon-sprite"></span></span>
+        <div class="slider__dots">
+            <span class="slider__dot"></span>
+            <span class="slider__dot slider__dot_active"></span>
+            <span class="slider__dot"></span>
+        </div>
+    </div>
+    <div class="content__block-content">
+        <div class="avatar ">
+            <div class="avatar__cover avatar__cover_big-xs">
+                <img class="pic" ng-src="{{ $ctrl.avatar }}" ng-if="$ctrl.avatar" height="123" width="123">
+                <label class="add-file">
+                    <input type="file" data-nv-file-select data-uploader="$ctrl.uploader" accept="image/*">
+                </label>
+                <span class="icon-search"></span>
+            </div>
+
+        </div>
+
+        <p class="content__block-description">Так будет выглядеть Ваше фото</p>
+        <div class="content__block-btn">
+            <a class="button" ng-click="$ctrl.close()">Готово</a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,169 @@
+.slider{
+  font-size: 0px;
+  margin-bottom: 80px;
+  &-wrapper {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    height: 301px;
+  }
+  &_gray {
+    background: #f7f7f7;
+    
+  }
+  &_cards {
+    border-radius: 6px;
+    position: relative;
+
+    .settings {
+      position: absolute;
+      left: 191px;
+      z-index: 5;
+      bottom: 126px;
+      .slider__arrows {
+        display: inline-block;
+        margin-left: 17px;
+      }
+    }
+    .slider {
+      &__item {
+       
+        &:last-child {
+          width: 54%;
+          min-width: 989px;
+        }
+        &:first-child {
+          width: 46%;
+        }
+        .img {
+          padding: 54px 0 40px 7px;
+          img {
+            width: 100%;
+          }
+        }
+        .content__text-medium {
+          margin-bottom: 213px;
+        }
+        .content {
+          padding: 68px 30px 0px 158px;
+          .icon-circle {
+            width: 44px;
+            height: 44px;
+            
+            position: relative;
+            z-index: 3;
+            .icon-fly,
+            .icon-bus,
+            .icon-train,
+            .icon-publick{
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              
+            }
+            .icon-bus {
+              margin: -16.5px 0 0 -14px;
+            }
+            .icon-train,
+            .icon-publick {
+              margin: -15px 0 0 -14px;
+            }
+            .icon-fly {
+              margin: -15px 0 0 -15px;
+              width: 30px;
+              height: 30px;
+              background-size: 30px 30px;
+            }
+          }
+          &__title {
+            margin: 25px 0 50px;
+            
+          }
+          &__text-medium {
+           
+          }
+        }
+        
+       
+      }
+      
+      &__dot {
+        background: #cdcdcd;
+        &_active {
+          background: #ffd480;
+        }
+      }
+      &__dots {
+        top: 7px;
+        left: -33px;
+      }
+      
+    }
+  }
+  &_info {
+    border-bottom-right-radius: 6px;
+    border-top-right-radius: 6px;
+    .slider {
+      &__item {
+        .img {
+          img {
+            width: 100%;
+            height: 521px;
+            margin-top: -7px;
+          }
+        }
+        &:first-child {
+          width: 53%;
+        }
+        &:last-child {
+          width: 45%;
+         
+        }
+        .icon-mooraway-little {
+          margin-left: -5px;
+        }
+        .content {
+          padding: 36px 80px 0px 146px;
+          &__title {
+            margin: 31px 0 40px;
+           
+          }
+          &__text-medium {
+           
+          }
+        }
+      }
+      &__arrows {
+        position: absolute;
+        left: 146px;
+        z-index: 5;
+        bottom: 85px;
+        @media(min-width: 1925px){
+          bottom: 30px;
+        }
+      }
+      &__dot {
+        background: #cdcdcd;
+        &_active {
+          background: #ffd480;
+        }
+      }
+      &__dots {
+        right: 108px;
+        top: 45px;
+      }
+    }
+  }
+  &_animate {
+    height: 211px!important;
+    display: block;
+    .slick-list {
+      margin-right: -20px;
+    }
+  }
+}
+
+.carousel-slider {
+  display: block;
+  height: 390px;
+}
